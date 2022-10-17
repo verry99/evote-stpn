@@ -4,5 +4,5 @@ const btnSubmit = document.querySelector(".btn-submit");
 nim.focus();
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
-  window.location.href = "/index.html";
+  window.location.href = "../index.html";
 });
