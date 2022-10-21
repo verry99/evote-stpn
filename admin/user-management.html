@@ -76,16 +76,389 @@
             <!-- breadcrumb -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">User</li>
+                <li class="breadcrumb-item active" aria-current="page">User Management</li>
               </ol>
             </nav>
+
             <div class="content-title">
               <h2 class="fw-bold">User Management</h2>
-              <p class="fs-5">ini user management.</p>
+              <p class="fs-5">Kelola pengguna aplikasi evote.</p>
+            </div>
+
+            <div class="container-fluid p-0">
+              <div class="row">
+                <div class="col-12 mb-3">
+                  <div class="d-flex">
+                    <a
+                      href="konfirmasi-user.html"
+                      type="button"
+                      class="btn btn-success position-relative ms-auto me-4 d-flex align-items-center"
+                    >
+                      <span class="material-symbols-outlined me-1 fs-5"> check_circle </span>Konfirmasi User
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        99+
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </a>
+                    <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#tambahUserModal">
+                      <span class="material-symbols-outlined d-flex align-items-center fs-5 me-1"> add </span>
+                      Tambah User
+                    </button>
+                  </div>
+                </div>
+                <div class="col-12 table-responsive">
+                  <table class="table table-bordered table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">NIM</th>
+                        <th scope="col">Nama Lengkap</th>
+                        <th scope="col">Jurusan</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>20293469</td>
+                        <td>Rizal Saefudin Supratman</td>
+                        <td>Diploma IV Pertanahan</td>
+                        <td>rizal_saefudin@gmail.com</td>
+                        <td>User</td>
+                        <td class="d-flex">
+                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                          </button>
+                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                          </button>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            <i class="far fa-trash-alt"
+                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>20293469</td>
+                        <td>Kucing Basefont</td>
+                        <td>Diploma I PPK</td>
+                        <td>kucing_basement@gmail.com</td>
+                        <td>Admin</td>
+                        <td class="d-flex">
+                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                          </button>
+                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                          </button>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            <i class="far fa-trash-alt"
+                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">3</th>
+                        <td>20293351</td>
+                        <td>Garrett Winters</td>
+                        <td>Prodiksus PPAT</td>
+                        <td>garret_winters@gmail.com</td>
+                        <td>User</td>
+                        <td class="d-flex">
+                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                          </button>
+                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                          </button>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            <i class="far fa-trash-alt"
+                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>20293167</td>
+                        <td>Ashton Cox</td>
+                        <td>Diploma I PPK</td>
+                        <td>ashton_cox@gmail.com</td>
+                        <td>User</td>
+                        <td class="d-flex">
+                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                          </button>
+                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
+                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                          </button>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                            <i class="far fa-trash-alt"
+                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                            >
+                          </button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MODALS -->
+      <!-- show user modal -->
+      <div class="modal fade" id="showUserModal" tabindex="-1" aria-labelledby="showUserModalLabel" aria-hidden="true">
+        Modal
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="showUserLabel">Detail User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM -->
+              <form action="#">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <!-- nim -->
+                      <div class="form-group">
+                        <label for="nim" class="form-label">NIM</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nim" autocomplete="off" value="20293469" disabled />
+                        </div>
+                      </div>
+                      <!-- nama lengkap -->
+                      <div class="form-group mt-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nama" autocomplete="off" value="Rizal Saefudin Supratman" disabled />
+                        </div>
+                      </div>
+                      <!-- jurusan -->
+                      <div class="form-group mt-3">
+                        <label for="jurusan" class="form-label">Jurusan</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="jurusan" autocomplete="off" value="Diploma IV Pertanahan" disabled />
+                        </div>
+                      </div>
+                      <!-- Email -->
+                      <div class="form-group mt-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="email" autocomplete="off" value="rizal_saefudin@gmail.com" disabled />
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="form-group mt-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="password" autocomplete="off" value="rizal1234" disabled />
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="form-group mt-3">
+                        <label for="role" class="form-label">Role</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="role" autocomplete="off" value="User" disabled />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal tambah user -->
+      <div class="modal fade" id="tambahUserModal" tabindex="-1" aria-labelledby="tambahUserModalLabel" aria-hidden="true">
+        Modal
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="tambahUserLabel">Tambah User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM -->
+              <form action="#">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <!-- nim -->
+                      <div class="form-group">
+                        <label for="nim" class="form-label">NIM</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nim" autocomplete="off" />
+                        </div>
+                      </div>
+                      <!-- nama lengkap -->
+                      <div class="form-group mt-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nama" autocomplete="off" />
+                        </div>
+                      </div>
+                      <!-- jurusan -->
+                      <div class="form-group mt-3">
+                        <label for="jurusan" class="form-label">Jurusan</label>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <select class="form-select" aria-label="Default select example">
+                              <option value="Diploma I PPK">Diploma I PPK</option>
+                              <option value="Diploma IV Pertanahan" selected>Diploma IV Pertanahan</option>
+                              <option value="Prodiksus PPAT">Prodiksus PPAT</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Email -->
+                      <div class="form-group mt-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="email" autocomplete="off" />
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="form-group mt-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="password" autocomplete="off" />
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="form-group mt-3">
+                        <label for="role" class="form-label">Role</label>
+                        <div class="input-group">
+                          <select class="form-select">
+                            <option value="User" selected>User</option>
+                            <option value="Admin">Admin</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Simpan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal edit user -->
+      <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        Modal
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="editUserLabel">Edit User</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <!-- FORM -->
+              <form action="#">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col">
+                      <!-- nim -->
+                      <div class="form-group">
+                        <label for="nim" class="form-label">NIM</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nim" autocomplete="off" value="20293469" />
+                        </div>
+                      </div>
+                      <!-- nama lengkap -->
+                      <div class="form-group mt-3">
+                        <label for="nama" class="form-label">Nama Lengkap</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="nama" autocomplete="off" value="Rizal Saefudin Supratman" />
+                        </div>
+                      </div>
+                      <!-- jurusan -->
+                      <div class="form-group mt-3">
+                        <label for="jurusan" class="form-label">Jurusan</label>
+                        <div class="form-group">
+                          <div class="input-group">
+                            <select class="form-select" aria-label="Default select example">
+                              <option value="Diploma I PPK">Diploma I PPK</option>
+                              <option value="Diploma IV Pertanahan" selected>Diploma IV Pertanahan</option>
+                              <option value="Prodiksus PPAT">Prodiksus PPAT</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Email -->
+                      <div class="form-group mt-3">
+                        <label for="email" class="form-label">Email</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="email" autocomplete="off" value="rizal_saefudin@gmail.com" />
+                        </div>
+                      </div>
+                      <!-- Password -->
+                      <div class="form-group mt-3">
+                        <label for="password" class="form-label">Password</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="password" autocomplete="off" value="rizal1234" />
+                        </div>
+                      </div>
+                      <!-- Role -->
+                      <div class="form-group mt-3">
+                        <label for="role" class="form-label">Role</label>
+                        <div class="input-group">
+                          <select class="form-select">
+                            <option value="User" selected>User</option>
+                            <option value="Admin">Admin</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Simpan</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- modal delete user -->
+      <div class="modal fade" id="deleteUserModal" tabindex="-1" aria-labelledby="deleteUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="deleteUserModalLabel">Hapus Calon</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">Apakah anda yakin ingin menghapus user ini?</div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+              <button type="button" class="btn btn-danger">Hapus</button>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script></script>
   </body>
 </html>
