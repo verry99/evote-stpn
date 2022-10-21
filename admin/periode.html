@@ -19,11 +19,12 @@
     "
     />
     <link rel="stylesheet" href="/css/admin/style.css" />
+    <link rel="stylesheet" href="/css/admin/periode.css" />
 
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
     "></script>
-    <script defer src="/js/admin/script.js"></script>
+    <script defer src="/js/admin/periode.js"></script>
   </head>
 
   <body>
@@ -36,13 +37,13 @@
         </div>
 
         <ul class="list-unstyled px-2">
-          <li class="my-2 active">
-            <a href="#" class="text-decoration-none d-flex px-3 py-2 d-block"
+          <li class="my-2">
+            <a href="index.html" class="text-decoration-none d-flex px-3 py-2 d-block"
               ><span class="material-symbols-outlined fs-5 d-flex align-items-center me-3"> home </span> Dashboard</a
             >
           </li>
-          <li class="my-2">
-            <a href="periode.html" class="text-decoration-none d-flex px-3 py-2 d-block"
+          <li class="my-2 active">
+            <a href="#" class="text-decoration-none d-flex px-3 py-2 d-block"
               ><span class="material-symbols-outlined fs-5 d-flex align-items-center me-3"> approval_delegation </span> Periode & Paslon</a
             >
           </li>
@@ -62,8 +63,9 @@
 
       <!-- CONTENT -->
       <div class="content">
-        <!-- Dashboard -->
-        <div class="dashboard" id="dashboard">
+        <!-- Periode & Paslon -->
+        <div id="periode-paslon">
+          <!-- mobile nav -->
           <nav class="navbar d-md-none bg-dark navbar-dark">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button">
@@ -72,88 +74,25 @@
             </div>
           </nav>
 
-          <!-- breadcrumb -->
           <div class="main-content px-lg-5 px-4 py-4">
+            <!-- breadcrumb -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                <li class="breadcrumb-item active" aria-current="page">Periode</li>
               </ol>
             </nav>
 
             <div class="content-title">
-              <h2 class="fw-bold">Dashboard</h2>
-              <p class="fs-5">Summary pemilihan ketua dan wakil BEM periode 2022/2023.</p>
-            </div>
-
-            <div class="paslon-container container-fluid">
-              <div class="row">
-                <!-- PASLON 01 -->
-                <div class="paslon__card col-lg-3 mt-lg-0 mt-3 me-lg-4 pb-4 px-0">
-                  <div class="paslon__img">
-                    <img src="/img/img-ketua-1.png" alt="img__ketua" width="50%" />
-                    <img src="/img/img-wakil-1.png" alt="img__wakil" width="50%" />
-                    <div class="img__overlay">
-                      <h1>01</h1>
-                    </div>
-                  </div>
-                  <div class="paslon__desc mt-4 px-3">
-                    <div class="d-flex justify-content-between">
-                      <p class="text-black-50">Persentase</p>
-                      <p class="paslon__desc--value text-success fw-semibold">60%</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <p class="text-black-50">Total Vote</p>
-                      <p class="paslon__desc--value">144/240</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- PASLON 02 -->
-                <div class="paslon__card col-lg-3 mt-lg-0 mt-3 me-lg-4 pb-4 px-0">
-                  <div class="paslon__img">
-                    <img src="/img/img-ketua-2.png" alt="img__ketua" width="50%" />
-                    <img src="/img/img-wakil-2.png" alt="img__wakil" width="50%" />
-                    <div class="img__overlay">
-                      <h1>02</h1>
-                    </div>
-                  </div>
-                  <div class="paslon__desc mt-4 px-3">
-                    <div class="d-flex justify-content-between">
-                      <p class="text-black-50">Persentase</p>
-                      <p class="paslon__desc--value text-danger fw-semibold">40%</p>
-                    </div>
-                    <div class="d-flex justify-content-between">
-                      <p class="text-black-50">Total Vote</p>
-                      <p class="paslon__desc--value">96/240</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Periode & Paslon -->
-        <div class="hidden" id="periode-paslon">
-          <nav class="navbar d-md-none bg-dark navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-
-          <div class="main-content px-5 py-4">
-            <div class="content-title">
-              <h2 class="fw-bold">Periode & Paslon</h2>
+              <h2 class="fw-bold">Periode Pemilihan</h2>
               <p class="fs-5">Periode pemilihan</p>
             </div>
 
             <div class="container-fluid p-0">
               <div class="row">
                 <div class="col-12 mb-3">
-                  <button class="btn btn-primary d-flex ms-auto">
-                    <span class="material-symbols-outlined d-flex align-items-center"> add </span> Tambah Periode
+                  <button class="btn btn-primary d-flex ms-auto" data-bs-toggle="modal" data-bs-target="#addPeriodModal">
+                    <span class="material-symbols-outlined d-flex align-items-center"> add </span>
+                    Tambah Periode
                   </button>
                 </div>
                 <div class="col-12 table-responsive">
@@ -175,10 +114,10 @@
                           <button type="button" class="btn btn-success d-flex disabled me-1">
                             <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
                           </button>
-                          <button type="button" class="btn btn-primary me-1">
+                          <a href="pasangan-calon.html" class="btn btn-primary me-1">
                             <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
+                          </a>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deletePeriodModal">
                             <i class="far fa-trash-alt"
                               ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
                             >
@@ -193,10 +132,10 @@
                           <button type="button" class="btn btn-success d-flex me-1">
                             <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
                           </button>
-                          <button type="button" class="btn btn-primary me-1">
+                          <a href="pasangan-calon.html" class="btn btn-primary me-1">
                             <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
+                          </a>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deletePeriodModal">
                             <i class="far fa-trash-alt"
                               ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
                             >
@@ -211,10 +150,10 @@
                           <button type="button" class="btn btn-success d-flex me-1">
                             <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
                           </button>
-                          <button type="button" class="btn btn-primary me-1">
+                          <a href="pasangan-calon.html" class="btn btn-primary me-1">
                             <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
+                          </a>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deletePeriodModal">
                             <i class="far fa-trash-alt"
                               ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
                             >
@@ -222,17 +161,17 @@
                         </td>
                       </tr>
                       <tr>
-                        <th scope="row">3</th>
+                        <th scope="row">4</th>
                         <td>2024/2025</td>
                         <td>Non-Aktif</td>
                         <td class="d-flex">
                           <button type="button" class="btn btn-success d-flex me-1">
                             <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
                           </button>
-                          <button type="button" class="btn btn-primary me-1">
+                          <a href="pasangan-calon.html" class="btn btn-primary me-1">
                             <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
+                          </a>
+                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deletePeriodModal">
                             <i class="far fa-trash-alt"
                               ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
                             >
@@ -246,21 +185,54 @@
             </div>
           </div>
         </div>
-        <!-- User Management -->
-        <div class="hidden" id="user-management">
-          <nav class="navbar d-md-none bg-dark navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
+      </div>
+    </div>
 
-          <div class="main-content px-5 py-4">
-            <div class="content-title">
-              <h2 class="fw-bold">User Management</h2>
-              <p class="fs-5">ini user management.</p>
-            </div>
+    <!-- MODALS -->
+    <!-- modal tambah periode -->
+    <div class="modal fade" id="addPeriodModal" tabindex="-1" aria-labelledby="addPeriodModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="addPeriodModalLabel">Tambah Periode</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="form-group">
+                <label for="tahun-periode" class="form-label">Pilih Tahun Periode</label>
+                <div class="input-group">
+                  <select class="form-select" id="tahun-periode">
+                    <option value="2021/2022">2021/2022</option>
+                    <option value="2022/2023" selected>2022/2023</option>
+                    <option value="2023/2024">2023/2024</option>
+                    <option value="2024/2025">2024/2025</option>
+                    <option value="2024/2025">2025/2026</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-primary">Tambah</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal hapus periode -->
+    <div class="modal fade" id="deletePeriodModal" tabindex="-1" aria-labelledby="deletePeriodModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deletePeriodModalLabel">Hapus Periode</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">Apakah anda yakin ingin menghapus periode "<b>2022/2023</b>"?</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="button" class="btn btn-danger">Hapus</button>
           </div>
         </div>
       </div>
