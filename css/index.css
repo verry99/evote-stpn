@@ -1,9 +1,0 @@
-.btn-lupa,
-.btn-daftar {
-  font-size: 0.9rem;
-  font-weight: 500;
-}
-.btn-lupa:hover,
-.btn-daftar:hover {
-  text-decoration: underline !important;
-}
