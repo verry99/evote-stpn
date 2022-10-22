@@ -19,11 +19,6 @@
     "
     />
     <link rel="stylesheet" href="/css/admin/style.css" />
-
-    <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
-    "></script>
-    <script defer src="/js/admin/script.js"></script>
   </head>
 
   <body>
@@ -86,31 +81,33 @@
             </div>
 
             <div class="container-fluid p-0">
-              <div class="row">
-                <div class="col-12">
-                  <div class="d-flex mt-4 mb-3">
-                    <form class="d-flex" role="search">
-                      <input class="form-control me-2" type="search" placeholder="Cari User" aria-label="Search" id="search" />
-                      <button class="btn btn-outline-success" type="submit">Cari</button>
-                    </form>
-                    <a
-                      href="konfirmasi-user.html"
-                      type="button"
-                      class="btn btn-success position-relative ms-auto me-4 d-flex align-items-center"
-                    >
-                      <span class="material-symbols-outlined me-1 fs-5"> check_circle </span>Konfirmasi User
-                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        99+
-                        <span class="visually-hidden">unread messages</span>
-                      </span>
-                    </a>
-                    <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addUserModal">
-                      <span class="material-symbols-outlined d-flex align-items-center fs-5 me-1"> add </span>
-                      Tambah User
-                    </button>
-                  </div>
+              <div class="row mt-4 flex-lg-row flex-column-reverse">
+                <div class="col-lg-6 d-flex">
+                  <form class="d-flex ms-lg-0 ms-auto mt-lg-0 mt-3" role="search">
+                    <input class="form-control me-lg-2" type="search" placeholder="Cari User" aria-label="Search" id="search" />
+                    <button class="btn btn-outline-success" type="submit">Cari</button>
+                  </form>
                 </div>
-                <div class="col-12 table-responsive">
+                <div class="col-lg-6 d-flex">
+                  <a
+                    href="konfirmasi-user.html"
+                    type="button"
+                    class="btn btn-success position-relative ms-auto me-4 d-flex align-items-center"
+                  >
+                    <span class="material-symbols-outlined me-1 fs-5"> check_circle </span>Konfirmasi User
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                      99+
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </a>
+                  <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addUserModal">
+                    <span class="material-symbols-outlined d-flex align-items-center fs-5 me-1"> add </span>
+                    Tambah User
+                  </button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 table-responsive mt-3">
                   <table class="table table-bordered table-striped">
                     <thead class="table-dark">
                       <tr>
@@ -131,18 +128,25 @@
                         <td>Diploma IV Pertanahan</td>
                         <td>rizal_saefudin@gmail.com</td>
                         <td>User</td>
-                        <td class="d-flex">
-                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                        <td>
+                          <div class="d-flex">
+                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success d-flex me-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserModal"
                             >
-                          </button>
+                              <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                            </button>
+                            <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                              <i class="far fa-trash-alt"
+                                ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                              >
+                            </button>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -152,18 +156,25 @@
                         <td>Diploma I PPK</td>
                         <td>kucing_basement@gmail.com</td>
                         <td>Admin</td>
-                        <td class="d-flex">
-                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                        <td>
+                          <div class="d-flex">
+                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success d-flex me-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserModal"
                             >
-                          </button>
+                              <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                            </button>
+                            <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                              <i class="far fa-trash-alt"
+                                ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                              >
+                            </button>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -173,18 +184,25 @@
                         <td>Prodiksus PPAT</td>
                         <td>garret_winters@gmail.com</td>
                         <td>User</td>
-                        <td class="d-flex">
-                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                        <td>
+                          <div class="d-flex">
+                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success d-flex me-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserModal"
                             >
-                          </button>
+                              <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                            </button>
+                            <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                              <i class="far fa-trash-alt"
+                                ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                              >
+                            </button>
+                          </div>
                         </td>
                       </tr>
                       <tr>
@@ -194,18 +212,25 @@
                         <td>Diploma I PPK</td>
                         <td>ashton_cox@gmail.com</td>
                         <td>User</td>
-                        <td class="d-flex">
-                          <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-success d-flex me-1" data-bs-toggle="modal" data-bs-target="#editUserModal">
-                            <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                        <td>
+                          <div class="d-flex">
+                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
+                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
+                            </button>
+                            <button
+                              type="button"
+                              class="btn btn-success d-flex me-1"
+                              data-bs-toggle="modal"
+                              data-bs-target="#editUserModal"
                             >
-                          </button>
+                              <span class="material-symbols-outlined d-flex align-items-center"> edit </span>
+                            </button>
+                            <button type="button" class="btn btn-danger me-1" data-bs-toggle="modal" data-bs-target="#deleteUserModal">
+                              <i class="far fa-trash-alt"
+                                ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
+                              >
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -463,6 +488,9 @@
       </div>
     </div>
 
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
+    "></script>
     <script src="/js/admin/navbar.js"></script>
     <script>
       const search = document.querySelector("#search");
