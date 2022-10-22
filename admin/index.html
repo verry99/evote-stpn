@@ -48,7 +48,7 @@
           </li>
           <hr class="h-color mx-3" />
           <li class="mt-auto">
-            <a href="/index.html" class="text-decoration-none d-flex px-3 py-2 d-block"
+            <a href="/index.html" class="btn__logout text-decoration-none d-flex px-3 py-2 d-block"
               ><span class="material-symbols-outlined fs-5 d-flex align-items-center me-3"> logout </span> Logout</a
             >
           </li>
@@ -93,12 +93,20 @@
                   </div>
                   <div class="paslon__desc mt-4 px-3">
                     <div class="d-flex justify-content-between">
+                      <p class="text-black-50">Ketua</p>
+                      <p class="text-end">Muhammad Yusuf</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="text-black-50">Wakil</p>
+                      <p class="text-end">Ridwan Ahmad</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
                       <p class="text-black-50">Persentase</p>
-                      <p class="paslon__desc--value text-success fw-semibold">60%</p>
+                      <p class="text-success fw-semibold">60%</p>
                     </div>
                     <div class="d-flex justify-content-between">
                       <p class="text-black-50">Total Vote</p>
-                      <p class="paslon__desc--value">144/240</p>
+                      <p>144/240</p>
                     </div>
                   </div>
                 </div>
@@ -114,12 +122,20 @@
                   </div>
                   <div class="paslon__desc mt-4 px-3">
                     <div class="d-flex justify-content-between">
+                      <p class="text-black-50">Ketua</p>
+                      <p class="text-end">Arifiyanto Hadinegoro</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                      <p class="text-black-50">Wakil</p>
+                      <p class="text-end">Zidan Ainul</p>
+                    </div>
+                    <div class="d-flex justify-content-between">
                       <p class="text-black-50">Persentase</p>
-                      <p class="paslon__desc--value text-danger fw-semibold">40%</p>
+                      <p class="text-danger fw-semibold">40%</p>
                     </div>
                     <div class="d-flex justify-content-between">
                       <p class="text-black-50">Total Vote</p>
-                      <p class="paslon__desc--value">96/240</p>
+                      <p>96/240</p>
                     </div>
                   </div>
                 </div>
@@ -127,144 +143,11 @@
             </div>
           </div>
         </div>
-
-        <!-- Periode & Paslon -->
-        <div class="hidden" id="periode-paslon">
-          <nav class="navbar d-md-none bg-dark navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-
-          <div class="main-content px-5 py-4">
-            <div class="content-title">
-              <h2 class="fw-bold">Periode & Paslon</h2>
-              <p class="fs-5">Periode pemilihan</p>
-            </div>
-
-            <div class="container-fluid p-0">
-              <div class="row">
-                <div class="col-12 mb-3">
-                  <button class="btn btn-primary d-flex ms-auto">
-                    <span class="material-symbols-outlined d-flex align-items-center"> add </span> Tambah Periode
-                  </button>
-                </div>
-                <div class="col-12 table-responsive">
-                  <table class="table table-bordered table-striped">
-                    <thead class="table-dark">
-                      <tr>
-                        <th scope="col">No</th>
-                        <th scope="col">Periode</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Aksi</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>2021/2022</td>
-                        <td>Selesai</td>
-                        <td class="d-flex">
-                          <button type="button" class="btn btn-success d-flex disabled me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
-                          </button>
-                          <button type="button" class="btn btn-primary me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
-                            >
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>2022/2023</td>
-                        <td>Aktif</td>
-                        <td class="d-flex">
-                          <button type="button" class="btn btn-success d-flex me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
-                          </button>
-                          <button type="button" class="btn btn-primary me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
-                            >
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>2023/2024</td>
-                        <td>Non-Aktif</td>
-                        <td class="d-flex">
-                          <button type="button" class="btn btn-success d-flex me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
-                          </button>
-                          <button type="button" class="btn btn-primary me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
-                            >
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>2024/2025</td>
-                        <td>Non-Aktif</td>
-                        <td class="d-flex">
-                          <button type="button" class="btn btn-success d-flex me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center"> play_arrow </span>Mulai Polling
-                          </button>
-                          <button type="button" class="btn btn-primary me-1">
-                            <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                          </button>
-                          <button type="button" class="btn btn-danger me-1">
-                            <i class="far fa-trash-alt"
-                              ><span class="material-symbols-outlined d-flex align-items-center"> delete </span></i
-                            >
-                          </button>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- User Management -->
-        <div class="hidden" id="user-management">
-          <nav class="navbar d-md-none bg-dark navbar-dark">
-            <div class="container-fluid">
-              <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-            </div>
-          </nav>
-
-          <div class="main-content px-5 py-4">
-            <div class="content-title">
-              <h2 class="fw-bold">User Management</h2>
-              <p class="fs-5">ini user management.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
     <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
-    "></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/admin/navbar.js"></script>
   </body>
 </html>

@@ -19,11 +19,6 @@
     "
     />
     <link rel="stylesheet" href="/css/admin/style.css" />
-
-    <!-- Javascript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js
-    "></script>
-
     <style>
       .overlay {
         backdrop-filter: blur(3px);
@@ -82,8 +77,8 @@
             <!-- breadcrumb -->
             <nav aria-label="breadcrumb">
               <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="/admin/periode.html">Periode</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Paslon</li>
+                <li class="breadcrumb-item"><a href="/admin/periode.html">List Periode</a></li>
+                <li class="breadcrumb-item active" aria-current="page">2022/2023</li>
               </ol>
             </nav>
 
@@ -113,6 +108,8 @@
                         <th scope="col">No</th>
                         <th scope="col">Nama Calon</th>
                         <th scope="col">Gambar</th>
+                        <th scope="col">Total Vote</th>
+                        <th scope="col">Persentase Vote</th>
                         <th scope="col">Aksi</th>
                       </tr>
                     </thead>
@@ -126,6 +123,8 @@
                             <img src="/img/img-wakil-1.png" alt="img-wakil-1" height="35" class="ms-2" />
                           </div>
                         </td>
+                        <td>144/240</td>
+                        <td><span class="text-success">60%</span></td>
                         <td>
                           <div class="d-flex">
                             <button type="button" class="btn btn-success me-1" data-bs-toggle="modal" data-bs-target="#addCandidateModal">
@@ -148,6 +147,8 @@
                             <img src="/img/img-wakil-2.png" alt="img-wakil-1" height="35" class="ms-2" />
                           </div>
                         </td>
+                        <td>96/240</td>
+                        <td><span class="text-danger">40%</span></td>
                         <td>
                           <div class="d-flex">
                             <button type="button" class="btn btn-success me-1" data-bs-toggle="modal" data-bs-target="#addCandidateModal">
@@ -316,8 +317,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/admin/navbar.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       const addCandidateModal = document.querySelector("#addCandidateModal");
       const nimKetua = document.querySelector("#nim-ketua");

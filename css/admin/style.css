@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 hr.h-color {
-  background-color: #eee;
+  color: #eee;
 }
 
 .sidebar li.active {

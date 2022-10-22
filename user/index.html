@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EVOTE BEM STPN 2022/2023</title>
 
-    <!-- CSS -->
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,18 +17,6 @@
   </head>
 
   <body>
-    <!-- MODAL -->
-    <div class="modal__intro">
-      <h4 class="fw-bold mb-4">PERHATIAN!</h4>
-      <p>
-        Pemilihan ini hanya dapat dilakukan <b>sekali</b> dan tidak dapat diulang. Mohon berhati-hati menggunakan hak pilih anda, jangan
-        sampai salah memilih dan
-        <b>gunakan hak pilih anda dengan baik.</b>
-      </p>
-      <button class="btn btn-secondary btn__mengerti w-100 rounded-5 d-block fw-bold">OKE, MENGERTI</button>
-    </div>
-    <div class="overlay"></div>
-
     <!-- NAVBAR -->
     <header>
       <nav class="navbar bg-light fixed-top">
@@ -87,7 +75,7 @@
           </div>
 
           <!-- PASLON 01 -->
-          <div class="paslon__card col-lg-3 my-4 p-0">
+          <div class="paslon__card col-lg-3 my-4 mx-3 p-0">
             <!-- gambar -->
             <div class="paslon__img">
               <img src="/img/img-ketua-1.png" alt="img__ketua" width="50%" />
@@ -100,20 +88,21 @@
             <div class="paslon__desc mt-4 px-3">
               <div class="d-flex justify-content-between">
                 <p class="text-black-50">Ketua</p>
-                <p class="paslon__desc--value">Muhammad Yusuf</p>
+                <p class="text-end">Muhammad Yusuf</p>
               </div>
               <div class="d-flex justify-content-between">
                 <p class="text-black-50">Wakil</p>
-                <p class="paslon__desc--value">Ridwan Ahmad</p>
+                <p class="text-end">Ridwan Ahmad</p>
               </div>
             </div>
             <!-- button -->
-            <a class="btn btn-primary btn__vote rounded-5 d-block fw-bold" href="success.html">VOTE</a>
+            <a class="btn btn-primary btn__vote d-block fw-bold" href="success.html">VOTE</a>
           </div>
           <hr class="paslon__rule" />
+          <!-- End of PASLON 01 -->
 
           <!-- PASLON 02 -->
-          <div class="paslon__card offset-lg-1 col-lg-3 my-4 p-0">
+          <div class="paslon__card col-lg-3 my-4 mx-3 p-0">
             <!-- gambar -->
             <div class="paslon__img">
               <img src="/img/img-ketua-2.png" alt="img__ketua" width="50%" />
@@ -126,16 +115,18 @@
             <div class="paslon__desc mt-4 px-3">
               <div class="d-flex justify-content-between">
                 <p class="text-black-50">Ketua</p>
-                <p class="paslon__desc--value">Arifiyanto Hadinegoro</p>
+                <p class="text-end">Arifiyanto Hadinegoro</p>
               </div>
               <div class="d-flex justify-content-between">
                 <p class="text-black-50">Wakil</p>
-                <p class="paslon__desc--value">Zidan Ainul</p>
+                <p class="text-end">Zidan Ainul</p>
               </div>
             </div>
             <!-- button -->
-            <a class="btn btn-primary btn__vote rounded-5 d-block fw-bold" href="success.html">VOTE</a>
+            <a class="btn btn-primary btn__vote d-block fw-bold" href="success.html">VOTE</a>
           </div>
+          <hr class="paslon__rule" />
+          <!-- End of PASLON 02 -->
         </div>
       </div>
     </section>
@@ -145,25 +136,34 @@
       <p class="text-center m-0">© Copyright <span id="year">2099</span> BEM STPN. All rights reserved.</p>
     </footer>
 
+    <!-- MODALS -->
+    <div class="modal fade overlay" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="warningModalLabel">PERHATIAN!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Pemilihan ini hanya dapat dilakukan <b>sekali</b> dan tidak dapat diulang. Mohon berhati-hati menggunakan hak pilih anda, jangan
+            sampai salah memilih dan
+            <b>gunakan hak pilih anda sebaik mungkin.</b>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary w-100 d-block fw-bold" data-bs-dismiss="modal">OKE, MENGERTI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Scripts -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-      const yearEl = document.querySelector("#year");
-      const modalIntroEl = document.querySelector(".modal__intro");
-      const overlayEl = document.querySelector(".overlay");
-      const btnMengertiEl = document.querySelector(".btn__mengerti");
+      const year = document.querySelector("#year");
+      let modal = bootstrap.Modal.getOrCreateInstance(document.getElementById("warningModal")); // Returns a Bootstrap modal instance
 
-      yearEl.textContent = new Date().getFullYear();
-
-      const hideModal = function () {
-        modalIntroEl.classList.add("hidden");
-        overlayEl.classList.add("hidden");
-      };
-      btnMengertiEl.addEventListener("click", hideModal);
+      year.textContent = new Date().getFullYear();
+      modal.show();
     </script>
   </body>
 </html>
