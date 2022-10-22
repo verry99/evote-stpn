@@ -6,6 +6,7 @@ import Regist from '../pages/Register';
 import ForgotPassword from '../pages/Forgot';
 import SetNewPass from '../pages/SetNewPass';
 import RegistSuccess from '../pages/RegistSuccess';
+import Dashboard from '../pages/dashboard/Home';
 
 export default function Router(){
   return (
@@ -17,6 +18,7 @@ export default function Router(){
       <Route path="/forgot-password" element={<ForgotPassword />} />
       <Route path="/otp-verify/:email" element={<OtpVerify />} />
       <Route path="/set-new-password" element={<SetNewPass />} />
+      <Route path="/dashboard" element={<Dashboard />} />
     </Routes>
   );
 }
