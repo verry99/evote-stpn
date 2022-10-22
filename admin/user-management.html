@@ -87,8 +87,12 @@
 
             <div class="container-fluid p-0">
               <div class="row">
-                <div class="col-12 mb-3">
-                  <div class="d-flex">
+                <div class="col-12">
+                  <div class="d-flex mt-4 mb-3">
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Cari User" aria-label="Search" id="search" />
+                      <button class="btn btn-outline-success" type="submit">Cari</button>
+                    </form>
                     <a
                       href="konfirmasi-user.html"
                       type="button"
@@ -100,7 +104,7 @@
                         <span class="visually-hidden">unread messages</span>
                       </span>
                     </a>
-                    <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#tambahUserModal">
+                    <button class="btn btn-primary d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#addUserModal">
                       <span class="material-symbols-outlined d-flex align-items-center fs-5 me-1"> add </span>
                       Tambah User
                     </button>
@@ -283,13 +287,13 @@
         </div>
       </div>
 
-      <!-- modal tambah user -->
-      <div class="modal fade" id="tambahUserModal" tabindex="-1" aria-labelledby="tambahUserModalLabel" aria-hidden="true">
+      <!-- modal add user -->
+      <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
         Modal
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="tambahUserLabel">Tambah User</h1>
+              <h1 class="modal-title fs-5" id="addUserLabel">Tambah User</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -300,9 +304,9 @@
                     <div class="col">
                       <!-- nim -->
                       <div class="form-group">
-                        <label for="nim" class="form-label">NIM</label>
+                        <label for="nim-add" class="form-label">NIM</label>
                         <div class="input-group">
-                          <input type="text" class="form-control" id="nim" autocomplete="off" />
+                          <input type="text" class="form-control" id="nim-add" autocomplete="off" />
                         </div>
                       </div>
                       <!-- nama lengkap -->
@@ -459,6 +463,16 @@
       </div>
     </div>
 
-    <script></script>
+    <script>
+      const search = document.querySelector("#search");
+      const addUserModal = document.querySelector("#addUserModal");
+      const editUserModal = document.querySelector("#editUserModal");
+      const nim = document.querySelector("#nim-add");
+
+      search.focus();
+      addUserModal.addEventListener("shown.bs.modal", () => {
+        nim.focus();
+      });
+    </script>
   </body>
 </html>
