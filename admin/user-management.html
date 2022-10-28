@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
+    <link rel="shortcut icon" href="/img/Logo_PPU_STPN.png" />
 
     <!-- Fonts Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,8 +27,8 @@
       <!-- SIDEBAR -->
       <div class="sidebar position-relative" id="side_nav">
         <div class="header-box px-3 pt-4 pb-4 d-flex justify-content-center me-4">
-          <img src="/img/stpn-logo.png" alt="stpn-logo" height="50" />
-          <h1 class="fs-5 text-center text-white ms-3">EVOTE <br />BEM STPN</h1>
+          <img src="/img/Logo_PPU_STPN.png" alt="Logo_PPU_STPN" height="50" />
+          <h1 class="fs-5 text-center text-white ms-3">EVOTE <br />BST STPN</h1>
         </div>
 
         <ul class="list-unstyled px-2">
@@ -108,7 +109,7 @@
                     <thead class="table-dark">
                       <tr>
                         <th scope="col">No</th>
-                        <th scope="col">NIM</th>
+                        <th scope="col">NIT</th>
                         <th scope="col">Nama Lengkap</th>
                         <th scope="col">Jurusan</th>
                         <th scope="col">Email</th>
@@ -126,9 +127,6 @@
                         <td>User</td>
                         <td>
                           <div class="d-flex">
-                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                            </button>
                             <button
                               type="button"
                               class="btn btn-success d-flex me-1"
@@ -154,9 +152,6 @@
                         <td>Admin</td>
                         <td>
                           <div class="d-flex">
-                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                            </button>
                             <button
                               type="button"
                               class="btn btn-success d-flex me-1"
@@ -182,9 +177,6 @@
                         <td>User</td>
                         <td>
                           <div class="d-flex">
-                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                            </button>
                             <button
                               type="button"
                               class="btn btn-success d-flex me-1"
@@ -210,9 +202,6 @@
                         <td>User</td>
                         <td>
                           <div class="d-flex">
-                            <button class="btn btn-primary me-1" data-bs-toggle="modal" data-bs-target="#showUserModal">
-                              <span class="material-symbols-outlined d-flex align-items-center">visibility</span>
-                            </button>
                             <button
                               type="button"
                               class="btn btn-success d-flex me-1"
@@ -239,75 +228,6 @@
       </div>
 
       <!-- MODALS -->
-      <!-- show user modal -->
-      <div class="modal fade" id="showUserModal" tabindex="-1" aria-labelledby="showUserModalLabel" aria-hidden="true">
-        Modal
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="showUserLabel">Detail User</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <!-- FORM -->
-              <form action="#">
-                <div class="container-fluid">
-                  <div class="row">
-                    <div class="col">
-                      <!-- nim -->
-                      <div class="form-group">
-                        <label for="nim" class="form-label">NIM</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="nim" autocomplete="off" value="20293469" disabled />
-                        </div>
-                      </div>
-                      <!-- nama lengkap -->
-                      <div class="form-group mt-3">
-                        <label for="nama" class="form-label">Nama Lengkap</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="nama" autocomplete="off" value="Rizal Saefudin Supratman" disabled />
-                        </div>
-                      </div>
-                      <!-- jurusan -->
-                      <div class="form-group mt-3">
-                        <label for="jurusan" class="form-label">Jurusan</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="jurusan" autocomplete="off" value="Diploma IV Pertanahan" disabled />
-                        </div>
-                      </div>
-                      <!-- Email -->
-                      <div class="form-group mt-3">
-                        <label for="email" class="form-label">Email</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="email" autocomplete="off" value="rizal_saefudin@gmail.com" disabled />
-                        </div>
-                      </div>
-                      <!-- Password -->
-                      <div class="form-group mt-3">
-                        <label for="password" class="form-label">Password</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="password" autocomplete="off" value="rizal1234" disabled />
-                        </div>
-                      </div>
-                      <!-- Role -->
-                      <div class="form-group mt-3">
-                        <label for="role" class="form-label">Role</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="role" autocomplete="off" value="User" disabled />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- modal add user -->
       <div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="addUserModalLabel" aria-hidden="true">
         Modal
@@ -323,11 +243,11 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col">
-                      <!-- nim -->
+                      <!-- nit -->
                       <div class="form-group">
-                        <label for="nim-add" class="form-label">NIM</label>
+                        <label for="nit-add" class="form-label">NIT</label>
                         <div class="input-group">
-                          <input type="text" class="form-control" id="nim-add" autocomplete="off" />
+                          <input type="text" class="form-control" id="nit-add" autocomplete="off" />
                         </div>
                       </div>
                       <!-- nama lengkap -->
@@ -402,11 +322,11 @@
                 <div class="container-fluid">
                   <div class="row">
                     <div class="col">
-                      <!-- nim -->
+                      <!-- nit -->
                       <div class="form-group">
-                        <label for="nim" class="form-label">NIM</label>
+                        <label for="nit" class="form-label">NIT</label>
                         <div class="input-group">
-                          <input type="text" class="form-control" id="nim" autocomplete="off" value="20293469" />
+                          <input type="text" class="form-control" id="nit" autocomplete="off" value="20293469" />
                         </div>
                       </div>
                       <!-- nama lengkap -->
@@ -491,11 +411,11 @@
       const search = document.querySelector("#search");
       const addUserModal = document.querySelector("#addUserModal");
       const editUserModal = document.querySelector("#editUserModal");
-      const nim = document.querySelector("#nim-add");
+      const nit = document.querySelector("#nit-add");
 
       search.focus();
       addUserModal.addEventListener("shown.bs.modal", () => {
-        nim.focus();
+        nit.focus();
       });
     </script>
   </body>
